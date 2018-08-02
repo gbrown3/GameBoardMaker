@@ -1,0 +1,95 @@
+<!-- Most of this stuff taken from these two sources: http://jsfiddle.net/mostthingsweb/cRayJ/1/, http://jqueryui.com/draggable/#snap-to
+
+Compiled together by Gabriel Brown-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snap to grid</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable({ grid: [ 40, 40 ] }, { containment: "parent" });
+  } );
+  </script>
+</head>
+<body>
+
+ 
+
+  <div class="gameboard" id="gameboard">
+
+    <!-- Center section -->
+    <div class="boardsection" id="centersection">
+
+      <div id="draggable" class="draggable ui-widget-content"></div>
+
+      <!-- Top section -->
+      <div class="boardsection" id="topsection">
+        <script type="text/javascript">
+
+          // Position section correctly
+          document.getElementById("topsection").setAttribute("style", "top: -200px;");
+
+        </script>
+      </div>
+
+      <!-- Right section -->
+      <div class="boardsection" id="rightsection">
+        <script type="text/javascript">
+
+          // Position section correctly
+          document.getElementById("rightsection").setAttribute("style", "right: -200px;");
+
+        </script>
+      </div>
+
+      <!-- Bottom section -->
+      <div class="boardsection" id="bottomsection">
+        <script type="text/javascript">
+
+          // Position section correctly
+          document.getElementById("bottomsection").setAttribute("style", "bottom: -200px;");
+
+        </script>
+      </div>
+
+      <!-- Left section -->
+      <div class="boardsection" id="leftsection">
+        <script type="text/javascript">
+
+          // Position section correctly
+          document.getElementById("leftsection").setAttribute("style", "left: -200px;");
+
+        </script>
+
+        <div class="settings">
+          <br>
+          Width: <br>
+          <input type="number" id="gridwidth-input"> <br>
+          Height: <br>
+          <input type="number" id="gridheight-input"> <br>
+          <button class="updateButton" onclick="UpdateGrid()"> Update Grid </button>
+
+          <script type="text/javascript">
+            // Make sure input boxes aren't too wide
+            document.getElementById("gridwidth-input").setAttribute("style", "width: 100px;");
+            document.getElementById("gridheight-input").setAttribute("style", "width: 100px;");
+          </script>
+        </div> <!-- End settings-->
+      </div>
+    </div>
+
+
+  </div> <!-- End gameboard-->
+
+
+</body>
+
+<script src="gameboard.js"></script>
+
+</html>

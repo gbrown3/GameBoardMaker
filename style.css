@@ -1,0 +1,57 @@
+.draggable { 
+    width: 40px; 
+    height: 40px; 
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 0;
+    background-color: black;
+}
+
+.ui-widget-header p, .ui-widget-content p { 
+    margin: 0;
+ }
+
+#snaptarget { height: 140px; }
+
+/*
+.gameboard {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px; /*set to a negative number 1/2 of your height*/ 
+   /* margin-left: -100px; /*set to a negative number 1/2 of your width*/ 
+  /*  background-repeat: repeat;
+    background-image: url("40x40.png");
+}
+*/
+
+.gameboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.boardsection {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-repeat: repeat;
+    background-image: url("40x40.png");
+}
+
+.settings {
+    position: absolute;
+    width: 200px; 
+    height: 100px;
+    top: 25%;
+    left: -200px;
+    border: 1px solid #ccc;
+}
+
+.updateButton {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+}
