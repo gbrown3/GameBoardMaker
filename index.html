@@ -13,20 +13,24 @@ Compiled together by Gabriel Brown-->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( "#draggable" ).draggable({ grid: [ 40, 40 ] }, { containment: "parent" });
+    $( "#draggable" ).draggable({ grid: [ 40, 40 ] }, { containment: "window" });
   } );
   </script>
 </head>
 <body>
 
  
+  
 
   <div class="gameboard" id="gameboard">
+
+
 
     <!-- Center section -->
     <div class="boardsection" id="centersection">
 
       <div id="draggable" class="draggable ui-widget-content"></div>
+      
 
       <!-- Top section -->
       <div class="boardsection" id="topsection">
